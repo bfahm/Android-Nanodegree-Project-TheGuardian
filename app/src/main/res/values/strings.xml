@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">GuardNews</string>
+    <string name="empty_title">Server did not return articles.</string>
+    <string name="empty_subtitle">Try again later.</string>
+    <string name="conn_title">Your phone is not connected.</string>
+    <string name="conn.sub">Check your connection settings.</string>
+    <string name="main_activity_chip_page">"Page "</string>
+    <string name="initial_page_number">1</string>
+
+    <string name="settings_menu_item_title">Settings</string>
+    <string name="settings_title">Settings</string>
+
+    <!--Number of articles related entries-->
+    <string name="settings_article_number_label">Number of Articles per page</string>
+    <string name="settings_article_number_key" translatable="false">art_num</string>
+    <string name="settings_article_number_default" translatable="false">20</string>
+
+
+    <!--Order by related entries-->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_newest_value</string>
+
+    <string name="settings_order_by_newest_label">Newest</string>
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+
+    <string name="settings_order_by_oldest_label">Oldest</string>
+    <string name="settings_order_by_oldest_value" translatable="false">oldest</string>
+
+    <string name="settings_order_by_relevance_label">Most Relevant</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+</resources>

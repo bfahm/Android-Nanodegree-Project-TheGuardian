@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    tools:context="com.xencosworks.ianguard.MainActivity">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:dividerHeight="0.5dp"
+        android:drawSelectorOnTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
+
+        <ImageView
+            android:id="@+id/empty_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/ic_warning_black_24dp" />
+
+        <TextView
+            android:id="@+id/empty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:text="Server did not return articles." />
+
+        <TextView
+            android:id="@+id/empty_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            tools:text="Try again later." />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/container_navigation"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/custom_chip"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/main_activity_chip_page"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/chip_page_number"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/initial_page_number"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTextIcons"
+        android:elevation="6dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_nav_prev"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:clickable="false"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_nav_next"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_nav_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_web_black_24dp"
+        android:theme="@style/customFAB"
+        app:fabCustomSize="55dp" />
+
+</RelativeLayout>
